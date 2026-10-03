@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ECommerceMini
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/ecommerce
+    username: ${POSTGRES_USER:ecommerce}
+    password: ${POSTGRES_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+    
